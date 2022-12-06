@@ -10,9 +10,11 @@ def start():
         question_answer = question["answer"]
         new_question = Question(question_text, question_answer)
         question_bank.append(new_question)
-    while lifes > 0:
+
+    quiz_brain = QuizBrain(question_bank)
+    
+    while quiz_brain.has_questions():
         print(f"LIFES: {lifes}")
-        quiz_brain = QuizBrain(question_bank)
-        if not quiz_brain.next_question():
-            lifes -= 1
+
+        quiz_brain.next_question()
 
