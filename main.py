@@ -1,6 +1,6 @@
 import quiz
 
-quiz.start()
+# quiz.start()
 
 
 

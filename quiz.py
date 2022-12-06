@@ -16,3 +16,6 @@ def start():
         quiz_brain.show_score()
         quiz_brain.next_question()
 
+    print("Quiz completed")
+    print(f"Final Score: {quiz_brain.score}")
+
