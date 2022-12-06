@@ -3,7 +3,6 @@ from quiz_data import question_data
 from quiz_brain import  QuizBrain
 
 def start():
-    lifes = 3
     question_bank = []
     for question in question_data:
         question_text = question["text"]
@@ -12,9 +11,8 @@ def start():
         question_bank.append(new_question)
 
     quiz_brain = QuizBrain(question_bank)
-    
-    while quiz_brain.has_questions():
-        print(f"LIFES: {lifes}")
 
+    while quiz_brain.has_questions():
+        quiz_brain.show_score()
         quiz_brain.next_question()
 
