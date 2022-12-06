@@ -1,18 +1,15 @@
 from turtle import Turtle, Screen
-
+import random
 
 def start():
     my_t = Turtle()
-    my_t.shape("turtle")
     my_screen = Screen()
-
-    num_sides = int(input("Sides:\n"))
-
-    for _ in range(num_sides):
-        my_t.forward(50)
-        my_t.left(360 / num_sides)
-
+    colors = ["Red", "Blue", "Black", "Green", "Yellow"]
+    directions = [0, 90, 180, 270]
+    for _ in range(30):
+        my_t.forward(30)
+        direction = random.randint(0, 3)
+        my_t.setheading(directions[direction])
 
     my_screen.exitonclick()
-
 
