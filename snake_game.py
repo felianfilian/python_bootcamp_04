@@ -6,17 +6,25 @@ my_s.title("Snake")
 my_s.bgcolor("black")
 
 start_pos = [(0, 0), (-20, 0), (-40, 0) ]
+segments = []
+
+game_active = True
 
 for pos in start_pos:
     new_segment = Turtle("square")
     new_segment.color("white")
+    new_segment.penup()
     new_segment.goto(pos)
+    segments.append(new_segment)
+
+while game_active:
+    for seg in segments:
+        seg.forward(20)
 
 
 def snake_up():
     print("test")
-    segment_01.setheading(90)
-    segment_01.forward(20)
+
 def snake_right():
     pass
 def snake_down():
