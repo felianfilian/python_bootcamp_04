@@ -1,4 +1,5 @@
 from turtle import Turtle, Screen
+import time
 
 my_s = Screen()
 my_s.setup(width=600, height=600)
@@ -18,8 +19,13 @@ for pos in start_pos:
     segments.append(new_segment)
 
 while game_active:
-    for seg in segments:
-        seg.forward(20)
+    my_s.update()
+    time.sleep(0.1)
+    for seg in range(start=2, stop=0, step=-1):
+        new_x = segments[seg -1].xcor()
+        new_y = segments[seg - 1].ycor()
+        segments[seg].goto(new_x, new_y)
+
 
 
 def snake_up():
