@@ -4,7 +4,8 @@ import spirograph
 import spot_painting
 import event_listener
 import etch_a_sketch
-import turtle_race
+import
+import snake_game
 
 # quiz.start()
 # turtle_graphic.start()
@@ -12,5 +13,5 @@ import turtle_race
 # spot_painting.start()
 # event_listener.start()
 # etch_a_sketch.start()
-turtle_race.start()
-
+# turtle_race.start()
+snake_game.start()

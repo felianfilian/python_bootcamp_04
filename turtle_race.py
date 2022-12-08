@@ -24,6 +24,15 @@ def start():
 
     while race_active:
         for turtle in all_turtles:
+            if turtle.xcor() > 230:
+                race_active = False
+                win_color = turtle.pencolor()
+                print(f"{turtle.pencolor()} win the race")
+                if win_color == user_bet:
+                    print("you won the race!")
+                else:
+                    print("you lost")
+
             rand_distance = random.randint(0, 10)
             turtle.forward(rand_distance)
 
