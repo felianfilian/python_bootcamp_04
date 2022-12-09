@@ -5,6 +5,7 @@ my_s = Screen()
 my_s.setup(width=600, height=600)
 my_s.title("Snake")
 my_s.bgcolor("black")
+my_s.tracer(0)
 
 start_pos = [(0, 0), (-20, 0), (-40, 0) ]
 segments = []
@@ -21,10 +22,11 @@ for pos in start_pos:
 while game_active:
     my_s.update()
     time.sleep(0.1)
-    for seg in range(start=2, stop=0, step=-1):
+    for seg in range(len(segments) - 1, 0, -1):
         new_x = segments[seg -1].xcor()
         new_y = segments[seg - 1].ycor()
         segments[seg].goto(new_x, new_y)
+    segments[0].forward(20)
 
 
 
