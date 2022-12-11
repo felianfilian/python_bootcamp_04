@@ -16,9 +16,10 @@ import snake_game
 # turtle_race.start()
 # snake_game.start()
 
-file = open("test.txt")
-contents = file.read()
-(contents)
+with open("test.txt") as file:
+    contents = file.read()
+    print(contents)
+
 
 
 
