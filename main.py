@@ -14,7 +14,13 @@ import snake_game
 # event_listener.start()
 # etch_a_sketch.start()
 # turtle_race.start()
-snake_game.start()
+# snake_game.start()
+
+file = open("test.txt")
+contents = file.read()
+(contents)
+
+
 
 
 
