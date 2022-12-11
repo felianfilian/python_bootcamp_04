@@ -15,7 +15,7 @@ class Score(Turtle):
 
     def update_scoreui(self):
         self.clear()
-        self.write(f"Score: {self.score}", align=ALIGNMENT, font=FONT)
+        self.write(f"Score: {self.score} Highscore: {self.highscore}", align=ALIGNMENT, font=FONT)
 
     def reset_score(self):
         if self.score > self.highscore:
