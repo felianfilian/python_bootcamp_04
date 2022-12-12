@@ -6,7 +6,8 @@ class Score(Turtle):
     def __init__(self):
         super().__init__()
         self.score = 0
-        self.highscore = 0
+        with open("test.txt", mode="r") as file:
+            self.highscore = int(file.read())
         self.color("white")
         self.penup()
         self.goto(0, 260)
@@ -20,6 +21,8 @@ class Score(Turtle):
     def reset_score(self):
         if self.score > self.highscore:
             self.highscore = self.score
+            with open("test.txt", mode="w") as file:
+                file.write(str(self.score))
         self.score = 0
         self.update_scoreui()
 
